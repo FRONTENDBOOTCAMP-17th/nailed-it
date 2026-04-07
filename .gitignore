@@ -1,0 +1,34 @@
+# 의존성
+node_modules/
+
+# 빌드 결과물
+dist/
+
+# 환경변수 (중요! 절대 커밋 금지)
+.env
+.env.*
+!.env.example
+
+# 캐시
+.eslintcache
+.stylelintcache
+
+# 로그
+logs
+*.log
+npm-debug.log*
+
+# OS 파일
+.DS_Store
+Thumbs.db
+
+# 에디터 설정
+.vscode/
+.idea/
+
+# 타입스크립트 (TS 쓰면 유지, 안 쓰면 삭제)
+*.tsbuildinfo
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
