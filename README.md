@@ -8,17 +8,34 @@
 - **주요 타겟**: 프론트엔드 기초를 다지고 싶은 학습자 🐣
 - **핵심 가치**: 문제 풀이를 통한 직관적인 학습 경험 제공 💡
 
-## ✨ Goals
+## ⭐ Goals
 
 - 프론트엔드 핵심 개념의 퀴즈화 🔥
 - 사용자 친화적인 UI/UX 구현 🎨
 - 지속적인 문제 업데이트 및 기능 확장 📈
 
+## ✨ Features
+
+- 🧑‍💻 관리자(Admin)
+  - 퀴즈 등록 / 수정 / 삭제
+  - 카테고리 관리
+
+- 🙋‍♀️ 사용자(User)
+  - 카테고리별 퀴즈 풀이
+  - 정답 및 해설 확인
+
+- 🔐 로그인 상태에 따른 기능 제한
+
 ## 🛠 Tech Stack
 
-- **Language**: HTML, CSS, JavaScript ⭐
-- **Build Tool**: Vite ⚡️
+- **Frontend**: Vanilla JavaScript (Vite) ⚡️
 - **Styling**: Tailwind CSS 🌊
+- **API**: REST API 🔥⭐
+- **Architecture**: Role-based (Admin · User) 👥
+
+## 📁 Project Structure
+
+Coming Soon 🚀
 
 ## 💻 Getting Started
 
@@ -39,7 +56,9 @@ npm run dev
 ```
 
 ## 🔗 Deployment
+
 Live Demo: Coming Soon 🚀
 
 ---
+
 Designed and Developed with 🖤 by [**Kim Yeon-soo**](https://github.com/harikim02)

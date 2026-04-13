@@ -1,0 +1,27 @@
+{
+  "name": "nailed-it",
+  "version": "1.0.0",
+  "description": "> Nail your frontend skills with quizzes.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FRONTENDBOOTCAMP-17th/nailed-it.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FRONTENDBOOTCAMP-17th/nailed-it/issues"
+  },
+  "homepage": "https://github.com/FRONTENDBOOTCAMP-17th/nailed-it#readme",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "tailwindcss": "^4.2.2",
+    "vite": "^8.0.8"
+  }
+}
