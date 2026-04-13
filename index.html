@@ -1,12 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NAILED IT</title>
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold">NAILED IT</h1>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAILED-IT-HOME</title>
+</head>
+
+<body>
+  <div class="min-h-screen bg-white flex flex-col">
+
+    <!-- Header -->
+    <header class="px-6 py-4 border-b border-black/10">
+      <div class="max-w-md mx-auto flex justify-between items-center">
+        <h1 class="font-bold">NAILED-IT</h1>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col items-center justify-center px-6 py-12">
+      <div class="max-w-md w-full space-y-6">
+
+        <!-- Title -->
+        <div class="text-center space-y-4">
+          <h1 class="text-4xl font-bold tracking-tight">NAILED-IT</h1>
+          <p class="text-xl font-bold">프론트엔드 학습자를 위한 퀴즈 웹서비스</p>
+        </div>
+
+        <!-- Categories Preview -->
+        <div class="space-y-4 pt-2">
+          <p class="text-sm text-black/60 text-center leading-relaxed">
+            HTML, CSS, JavaScript 문제를 풀고<br />
+            정답과 해설을 확인하며 학습할 수 있습니다!
+          </p>
+          <div class="grid grid-cols-3 gap-3">
+
+            <!-- HTML -->
+            <div class="border border-black/10 rounded-lg flex flex-col items-center justify-center gap-2 py-6 px-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+                <line x1="12" y1="2" x2="12" y2="22"></line>
+              </svg>
+              <span class="text-sm font-medium">HTML</span>
+            </div>
+
+            <!-- CSS -->
+            <div class="border border-black/10 rounded-lg flex flex-col items-center justify-center gap-2 py-6 px-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"></path>
+                <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                <path d="m5 12-3 3 3 3"></path>
+                <path d="m9 18 3-3-3-3"></path>
+              </svg>
+              <span class="text-sm font-medium">CSS</span>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="border border-black/10 rounded-lg flex flex-col items-center justify-center gap-2 py-6 px-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"></path>
+                <path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"></path>
+              </svg>
+              <span class="text-sm font-medium">JavaScript</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="space-y-3 pt-4">
+          <a href="login.html"
+            class="block w-full bg-black text-white py-4 rounded-lg hover:bg-black/90 transition-colors text-center">
+            퀴즈 시작하기
+          </a>
+          <a href="signup.html"
+            class="block w-full border border-black/20 text-black py-4 rounded-lg hover:bg-black/5 transition-colors text-center">
+            회원가입 하러 가기
+          </a>
+        </div>
+
+        <!-- Admin Link -->
+        <div class="text-center pt-4">
+          <a href="admin-login.html" class="text-sm text-black/40 hover:text-black/60 transition-colors">
+            관리자 로그인
+          </a>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
