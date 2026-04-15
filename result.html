@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAILED-IT - 퀴즈 결과</title>
+</head>
+
+<body>
+    <div class="min-h-screen bg-white">
+
+        <!-- Header -->
+        <header class="px-6 py-4 border-b border-black/10">
+            <div class="max-w-md mx-auto flex items-center justify-between">
+                <div class="flex-1"></div>
+                <h2 class="font-medium text-center">퀴즈 결과</h2>
+                <div class="flex-1 flex justify-end">
+                    <button id="logoutBtn" class="p-2 hover:bg-black/5 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="px-6 py-8">
+            <div class="max-w-md mx-auto space-y-8">
+
+                <!-- API로 받아와야 표시 가능: score, totalQuizzes, category, completedAt -->
+
+                <!-- API로 받아와야 표시 가능: 맞은 문제 수, 틀린 문제 수 -->
+
+                <!-- API로 받아와야 표시 가능: 문제별 결과 (title, question, options, answer, selected_index, correct, skipped, explanation) -->
+
+                <!-- Actions -->
+                <div class="space-y-3">
+                    <a href="categories.html"
+                        class="block w-full bg-black text-white py-4 rounded-lg hover:bg-black/90 transition-colors text-center">다시
+                        풀기</a>
+                    <a href="history.html"
+                        class="block w-full border border-black/20 text-black py-4 rounded-lg hover:bg-black/5 transition-colors text-center">히스토리
+                        보기</a>
+                    <a href="index.html"
+                        class="block w-full border border-black/20 text-black py-4 rounded-lg hover:bg-black/5 transition-colors text-center">홈으로</a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

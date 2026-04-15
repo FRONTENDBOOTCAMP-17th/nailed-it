@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAILED-IT - 퀴즈</title>
+</head>
+
+<body>
+    <div class="min-h-screen bg-white flex flex-col">
+
+        <!-- Header -->
+        <header class="px-6 py-4 border-b border-black/10">
+            <div class="max-w-md mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="categories.html" class="p-2 -ml-2 hover:bg-black/5 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m12 19-7-7 7-7"></path>
+                            <path d="M19 12H5"></path>
+                        </svg>
+                    </a>
+                    <!-- API로 받아와야 표시 가능: category -->
+                </div>
+                <button id="exitBtn" class="p-2 hover:bg-black/5 rounded-lg transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- API로 받아와야 표시 가능: progress bar (currentIndex / total) -->
+        <div class="h-1 bg-black/5">
+            <div class="h-full bg-black transition-all duration-300"></div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 px-6 py-8">
+            <div class="max-w-md mx-auto h-full flex flex-col">
+
+                <!-- API로 받아와야 표시 가능: currentIndex, total, difficulty -->
+
+                <!-- API로 받아와야 표시 가능: title, question -->
+
+                <!-- API로 받아와야 표시 가능: options, answer, explanation -->
+
+                <!-- Error Message -->
+                <div id="errorMessage" class="text-sm text-red-500 text-center py-3 hidden"></div>
+
+                <!-- Action Buttons (제출 전) -->
+                <div id="beforeSubmit" class="flex gap-3 pt-6">
+                    <button id="skipBtn"
+                        class="flex-1 py-4 border border-black/20 rounded-lg hover:bg-black/5 transition-colors">
+                        스킵
+                    </button>
+                    <!-- API로 받아와야 작동 가능: 제출 (sessionId, quizId, selected_index 필요) -->
+                    <button id="submitBtn"
+                        class="flex-1 py-4 rounded-lg transition-colors bg-black/10 text-black/40 cursor-not-allowed"
+                        disabled>
+                        제출
+                    </button>
+                </div>
+
+                <!-- Action Buttons (제출 후) -->
+                <!-- API로 받아와야 작동 가능: 다음 문제 / 결과 확인하기 -->
+                <div id="afterSubmit" class="pt-6 hidden">
+                    <button id="nextBtn"
+                        class="w-full bg-black text-white py-4 rounded-lg hover:bg-black/90 transition-colors">
+                        다음 문제
+                    </button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
