@@ -14,7 +14,7 @@ export default defineConfig({
         quiz: resolve(__dirname, "pages/quiz.html"),
         result: resolve(__dirname, "pages/result.html"),
         history: resolve(__dirname, "pages/history.html"),
-        adminLogin: resolve(__dirname, "pages/admin/login.html"),
+        // adminLogin: resolve(__dirname, "pages/admin/login.html"),
         adminQuestions: resolve(__dirname, "pages/admin/question-list.html"),
         adminQuestionNew: resolve(__dirname, "pages/admin/question-new.html"),
         adminQuestionDetail: resolve(__dirname, "pages/admin/question-detail.html"),
