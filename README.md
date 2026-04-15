@@ -35,30 +35,48 @@
 
 ## 📁 Project Structure
 
+```plaintext
 NAILED-IT/
-├── index.html # 서비스 소개 및 시작 화면
+├── index.html                # 서비스 소개 및 시작 화면
 ├── src/
-│ ├── pages/
-│ │ ├── login.html # 로그인
-│ │ ├── signup.html # 회원가입
-│ │ ├── category.html # 카테고리 선택
-│ │ ├── quiz.html # 퀴즈 풀이
-│ │ ├── result.html # 세션 결과
-│ │ ├── history.html # 풀이 히스토리
-│ │ └── admin/
-│ │ ├── quiz-list.html # 퀴즈 목록 관리
-│ │ ├── quiz-form.html # 퀴즈 등록 / 수정
-│ │ └── quiz-detail.html # 퀴즈 상세 조회
-│ ├── js/
-│ │ ├── api/ # API 호출 (fetch 전담)
-│ │ ├── pages/ # 페이지별 DOM 조작 · 이벤트
-│ │ └── utils/ # 공통 유틸 함수
-│ ├── main.js # Vite 진입점
-│ └── style.css # Tailwind CSS
+│   ├── pages/
+│   │   ├── login.html        # 로그인
+│   │   ├── signup.html       # 회원가입
+│   │   ├── category.html     # 카테고리 선택
+│   │   ├── quiz.html         # 퀴즈 풀이
+│   │   ├── result.html       # 퀴즈 결과
+│   │   ├── history.html      # 히스토리
+│   │   └── admin/
+│   │       ├── quiz-list.html
+│   │       ├── quiz-form.html
+│   │       ├── quiz-edit.html
+│   │       └── quiz-detail.html
+│   │
+│   ├── js/
+│   │   ├── api/              # API 호출 (fetch 전담)
+│   │   │   └── api.js
+│   │   ├── pages/            # 페이지별 로직
+│   │   │   ├── login.js
+│   │   │   ├── signup.js
+│   │   │   ├── category.js
+│   │   │   ├── quiz.js
+│   │   │   ├── result.js
+│   │   │   ├── history.js
+│   │   │   └── admin/
+│   │   │       ├── quiz-list.js
+│   │   │       ├── quiz-form.js
+│   │   │       ├── quiz-edit.js
+│   │   │       └── quiz-detail.js
+│   │   └── utils/
+│   │
+│   ├── main.js               # Vite 진입점
+│   └── style.css             # Tailwind CSS
+│
 ├── package.json
 └── vite.config.js
+```
 
-> 📍 개발 진행에 따라 구조가 추가되거나 변경될 수 있습니다.
+> 📍 개발 진행에 따라 구조가 추가되거나 변경될 수 있습니다!!
 
 ## 💻 Getting Started
 

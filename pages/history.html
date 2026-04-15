@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>히스토리 PAGE</title>
+</head>
+
+<body>
+    <div class="min-h-screen bg-white">
+
+        <!-- Header -->
+        <header class="px-6 py-4 border-b border-black/10">
+            <div class="max-w-4xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="categories.html" class="p-2 -ml-2 hover:bg-black/5 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m12 19-7-7 7-7"></path>
+                            <path d="M19 12H5"></path>
+                        </svg>
+                    </a>
+                    <h2 class="font-medium">퀴즈 히스토리</h2>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="p-2 hover:bg-black/5 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </a>
+                    <button id="logoutBtn" class="p-2 hover:bg-black/5 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="px-6 py-8">
+            <div class="max-w-4xl mx-auto space-y-6">
+
+                <!-- API로 받아와야 표시 가능: user.nickname -->
+
+                <!-- Category Filter -->
+                <div class="flex gap-2 flex-wrap justify-center">
+                    <button class="filter-btn px-4 py-2 rounded-lg transition-colors bg-black text-white">전체</button>
+                    <button
+                        class="filter-btn px-4 py-2 rounded-lg transition-colors border border-black/20 hover:bg-black/5">HTML</button>
+                    <button
+                        class="filter-btn px-4 py-2 rounded-lg transition-colors border border-black/20 hover:bg-black/5">CSS</button>
+                    <button
+                        class="filter-btn px-4 py-2 rounded-lg transition-colors border border-black/20 hover:bg-black/5">JavaScript</button>
+                </div>
+
+                <!-- API로 받아와야 표시 가능: sessions (category, date, score, total, sessionId) -->
+
+                <!-- API로 받아와야 표시 가능: total (총 기록 수) -->
+
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
