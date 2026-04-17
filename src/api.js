@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://api.fullstackfamily.com/api/nailed-it/v1';
