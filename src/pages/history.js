@@ -1,4 +1,5 @@
 import { requireAuth, getUser, getCategories, getSessionHistory, clearAuth } from '/src/api.js';
+<<<<<<< HEAD
 import { pageHeader, historyActions } from '/src/components/header.js';
 
 // 헤더 주입 — logoutBtn이 DOM에 생겨야 아래 이벤트 연결 가능
@@ -11,6 +12,8 @@ if (slot) {
     maxWidth: 'max-w-4xl',
   });
 }
+=======
+>>>>>>> 0b85812 (feat: add and connect JavaScript files)
 
 requireAuth();
 
