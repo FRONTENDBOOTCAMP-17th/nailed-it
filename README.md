@@ -37,41 +37,44 @@
 
 ```plaintext
 NAILED-IT/
-├── index.html                # 서비스 소개 및 시작 화면
-├── src/
-│   ├── pages/
-│   │   ├── login.html        # 로그인
-│   │   ├── signup.html       # 회원가입
-│   │   ├── category.html     # 카테고리 선택
-│   │   ├── quiz.html         # 퀴즈 풀이
-│   │   ├── result.html       # 퀴즈 결과
-│   │   ├── history.html      # 히스토리
-│   │   └── admin/
-│   │       ├── quiz-list.html
-│   │       ├── quiz-form.html
-│   │       ├── quiz-edit.html
-│   │       └── quiz-detail.html
-│   │
-│   ├── js/
-│   │   ├── api/              # API 호출 (fetch 전담)
-│   │   │   └── api.js
-│   │   ├── pages/            # 페이지별 로직
-│   │   │   ├── login.js
-│   │   │   ├── signup.js
-│   │   │   ├── category.js
-│   │   │   ├── quiz.js
-│   │   │   ├── result.js
-│   │   │   ├── history.js
-│   │   │   └── admin/
-│   │   │       ├── quiz-list.js
-│   │   │       ├── quiz-form.js
-│   │   │       ├── quiz-edit.js
-│   │   │       └── quiz-detail.js
-│   │   └── utils/
-│   │
-│   ├── main.js               # Vite 진입점
-│   └── style.css             # Tailwind CSS
+├── index.html                  # 서비스 소개 및 시작 화면
+├── pages/                      # HTML 페이지
+│   ├── login.html              # 로그인
+│   ├── signup.html             # 회원가입
+│   ├── category.html           # 카테고리 선택
+│   ├── quiz.html               # 퀴즈 풀이
+│   ├── result.html             # 퀴즈 결과
+│   ├── history.html            # 히스토리
+│   └── admin/                  # 관리자 페이지
+│       ├── quiz-list.html
+│       ├── quiz-form.html
+│       ├── quiz-edit.html
+│       └── quiz-detail.html
 │
+├── src/
+│   ├── components/             # 공통 UI 컴포넌트
+│   │   ├── header.js           # 페이지 헤더 컴포넌트
+│   │   └── icon.js             # SVG 아이콘 컴포넌트
+│   │
+│   ├── pages/                  # 페이지별 JS 로직
+│   │   ├── index.js
+│   │   ├── login.js
+│   │   ├── signup.js
+│   │   ├── category.js
+│   │   ├── quiz.js
+│   │   ├── result.js
+│   │   ├── history.js
+│   │   └── admin/
+│   │       ├── quiz-list.js
+│   │       ├── quiz-form.js
+│   │       ├── quiz-edit.js
+│   │       └── quiz-detail.js
+│   │
+│   ├── api.js                  # API 호출 함수 모음
+│   ├── main.js                 # Tailwind CSS 진입점
+│   └── style.css               # Tailwind CSS
+│
+├── docs/                       # 개발 문서
 ├── package.json
 └── vite.config.js
 ```
