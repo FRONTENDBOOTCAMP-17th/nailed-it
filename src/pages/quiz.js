@@ -41,7 +41,6 @@ let showResult = false;
 // headerTitle은 이제 id로 찾아야 함 (헤더가 동적으로 생성됨)
 const headerTitle = document.getElementById('categoryTitle');
 const headerTitle = document.querySelector('h2');
-const headerTitle = document.querySelector('h2');
 const progressBar = document.querySelector('.h-full.bg-black');
 const questionNumberEl = document.querySelector('.text-sm.text-black\\/40');
 const difficultyEl = document.querySelector('.text-xs.rounded');
