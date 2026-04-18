@@ -1,4 +1,10 @@
 import { signup } from '/src/api.js';
+import { pageHeader } from '/src/components/header.js';
+
+const slot = document.getElementById('headerSlot');
+if (slot) {
+  slot.outerHTML = pageHeader({ title: '회원가입', backHref: '/pages/login.html' });
+}
 
 const signupForm = document.getElementById('signupForm');
 const nicknameInput = document.getElementById('nickname');

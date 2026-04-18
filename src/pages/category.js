@@ -1,4 +1,14 @@
 import { requireAuth, getUser, getCategories, createSession, clearAuth } from '/src/api.js';
+import { pageHeader, defaultActions } from '/src/components/header.js';
+
+const slot = document.getElementById('headerSlot');
+if (slot) {
+  slot.outerHTML = pageHeader({
+    title: '카테고리 선택',
+    backHref: '/index.html',
+    actionsHtml: defaultActions(),
+  });
+}
 
 requireAuth();
 

@@ -1,4 +1,10 @@
 import { login, saveAuth } from '/src/api.js';
+import { pageHeader } from '/src/components/header.js';
+
+const slot = document.getElementById('headerSlot');
+if (slot) {
+  slot.outerHTML = pageHeader({ title: '로그인', backHref: '/index.html' });
+}
 
 const loginForm = document.getElementById('loginForm');
 const emailInput = document.getElementById('email');
@@ -50,4 +56,9 @@ loginForm.addEventListener('submit', async (e) => {
   } finally {
     setLoading(false);
   }
+});
+
+// 비밀번호 찾기
+document.getElementById('forgotPasswordBtn')?.addEventListener('click', () => {
+  alert('비밀번호 찾기 기능은 추후 구현 예정입니다.');
 });

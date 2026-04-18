@@ -1,4 +1,14 @@
 import { requireAuth, getSessionResult, clearAuth } from '/src/api.js';
+import { pageHeader, defaultActions } from '/src/components/header.js';
+
+// 헤더 주입 — logoutBtn이 DOM에 생겨야 아래 이벤트 연결 가능
+const slot = document.getElementById('headerSlot');
+if (slot) {
+  slot.outerHTML = pageHeader({
+    title: '퀴즈 결과',
+    actionsHtml: defaultActions(),
+  });
+}
 
 requireAuth();
 
