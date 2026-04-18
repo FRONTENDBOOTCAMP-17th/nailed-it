@@ -3,7 +3,6 @@ import { requireAuth, getUser, getCategories, getSessionHistory, clearAuth } fro
 import { pageHeader, historyActions } from '/src/components/header.js';
 
 export function initHistoryPage() {
-  // 헤더 주입 — logoutBtn이 DOM에 생겨야 아래 이벤트 연결 가능
   const slot = document.getElementById('headerSlot');
   if (slot) {
     slot.outerHTML = pageHeader({
@@ -18,13 +17,11 @@ export function initHistoryPage() {
 
   const user = getUser();
 
-  // 유저 닉네임 표시
   const userInfoEl = document.querySelector('.text-center p');
   if (userInfoEl && user) {
     userInfoEl.innerHTML = `<span class="font-medium text-black">${user.nickname}</span>님의 퀴즈 기록`;
   }
 
-  // 로그아웃
   document.getElementById('logoutBtn').addEventListener('click', () => {
     if (confirm('로그아웃 하시겠습니까?')) {
       clearAuth();
@@ -101,7 +98,7 @@ export function initHistoryPage() {
         return;
       }
 
-      sessionList.innerHTML = sessions.map((session) => `
+      sessionList.innerHTML = sessions.map((session, index) => `
         <a
           href="/pages/result.html"
           class="block w-full p-6 border border-black/10 rounded-lg hover:bg-black/5 transition-colors"
@@ -124,12 +121,11 @@ export function initHistoryPage() {
                 <div class="text-sm text-black/60">점수: ${Math.round((session.score / session.totalQuizzes) * 100)}점</div>
               </div>
             </div>
-            <div class="text-sm text-black/40">세션 #${session.sessionId}</div>
+            <div class="text-sm text-black/40">세션 #${index + 1}</div>
           </div>
         </a>
       `).join('');
 
-      // 세션 클릭 시 결과 페이지로 이동
       sessionList.querySelectorAll('a[data-session-id]').forEach((link) => {
         link.addEventListener('click', (e) => {
           e.preventDefault();
