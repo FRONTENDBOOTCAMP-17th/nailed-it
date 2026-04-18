@@ -1,4 +1,5 @@
 import { requireAuth, getUser, getCategories, createSession, clearAuth } from '/src/api.js';
+<<<<<<< HEAD
 import { pageHeader, defaultActions } from '/src/components/header.js';
 import { icon } from '/src/components/icon.js';
 
@@ -10,6 +11,8 @@ if (slot) {
     actionsHtml: defaultActions(),
   });
 }
+=======
+>>>>>>> 0b85812 (feat: add and connect JavaScript files)
 
 requireAuth();
 
@@ -29,7 +32,16 @@ document.getElementById('logoutBtn').addEventListener('click', async () => {
   }
 });
 
+<<<<<<< HEAD
 
+=======
+// 카테고리 아이콘 매핑
+const icons = {
+  html: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline><line x1="12" y1="2" x2="12" y2="22"></line></svg>`,
+  css: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="m5 12-3 3 3 3"></path><path d="m9 18 3-3-3-3"></path></svg>`,
+  js: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"></path><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"></path></svg>`,
+};
+>>>>>>> 0b85812 (feat: add and connect JavaScript files)
 
 // 카테고리 목록 렌더링
 async function renderCategories() {
@@ -47,7 +59,11 @@ async function renderCategories() {
       >
         <div class="flex items-start gap-4">
           <div class="p-3 border border-black/10 rounded-lg group-hover:bg-white transition-colors">
+<<<<<<< HEAD
             ${icon(category.name) || icon('html')}
+=======
+            ${icons[category.name] || icons.html}
+>>>>>>> 0b85812 (feat: add and connect JavaScript files)
           </div>
           <div class="flex-1 space-y-1">
             <div class="flex items-center justify-between">

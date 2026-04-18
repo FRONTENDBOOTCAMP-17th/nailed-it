@@ -1,9 +1,13 @@
 import { getUser, isAdmin, clearAuth } from '/src/api.js';
+<<<<<<< HEAD
 import { icon } from '/src/components/icon.js';
+=======
+>>>>>>> 0b85812 (feat: add and connect JavaScript files)
 
 const user = getUser();
 const actionButtons = document.querySelector('.space-y-3.pt-4');
 
+<<<<<<< HEAD
 // 카테고리 미리보기 카드 렌더링
 const CATEGORIES = [
   { id: 'html',       label: 'HTML' },
@@ -22,6 +26,8 @@ if (preview) {
 }
 
 // 로그인 상태에 따라 버튼 렌더링
+=======
+>>>>>>> 0b85812 (feat: add and connect JavaScript files)
 function render() {
   if (!user) {
     // 비로그인 상태 → 기본 버튼 유지
