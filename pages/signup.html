@@ -10,7 +10,7 @@
 <body>
     <div class="min-h-screen bg-white">
 
-    <div id="headerSlot"></div>
+        <div id="headerSlot"></div>
 
         <!-- Main Content -->
         <main class="px-6 py-8">
@@ -19,10 +19,10 @@
 
                     <!-- Nickname -->
                     <div class="space-y-2">
-                        <label class="block text-sm">
+                        <label for="nickname" class="block text-sm">
                             닉네임 <span class="text-red-500">*</span>
                         </label>
-                        <input type="text" id="nickname"
+                        <input type="text" id="nickname" name="nickname" required autocomplete="username"
                             class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
                             placeholder="닉네임을 입력하세요 (1~10자)" maxlength="10" />
                         <p class="text-xs text-black/40">특수문자는 - _ . 만 사용 가능</p>
@@ -30,20 +30,20 @@
 
                     <!-- Email -->
                     <div class="space-y-2">
-                        <label class="block text-sm">
+                        <label for="email" class="block text-sm">
                             이메일 <span class="text-red-500">*</span>
                         </label>
-                        <input type="email" id="email"
+                        <input type="email" id="email" name="email" required autocomplete="email"
                             class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
                             placeholder="이메일을 입력하세요" />
                     </div>
 
                     <!-- Password -->
                     <div class="space-y-2">
-                        <label class="block text-sm">
+                        <label for="password" class="block text-sm">
                             비밀번호 <span class="text-red-500">*</span>
                         </label>
-                        <input type="password" id="password"
+                        <input type="password" id="password" name="password" required autocomplete="new-password"
                             class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
                             placeholder="비밀번호를 입력하세요" />
                         <p class="text-xs text-black/40">최소 8자, 영문·숫자·특수문자 각 1개 이상 포함</p>
