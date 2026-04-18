@@ -1,7 +1,6 @@
 import { requireAuth, getUser, getCategories, createSession, clearAuth } from '/src/api.js';
 <<<<<<< HEAD
 import { pageHeader, defaultActions } from '/src/components/header.js';
-import { icon } from '/src/components/icon.js';
 
 const slot = document.getElementById('headerSlot');
 if (slot) {
