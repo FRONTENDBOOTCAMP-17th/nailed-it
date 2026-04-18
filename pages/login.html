@@ -10,6 +10,9 @@
 <body>
     <div class="min-h-screen bg-white">
 
+<<<<<<< HEAD
+        <div id="headerSlot"></div>
+=======
         <!-- Header -->
         <header class="px-6 py-4 border-b border-black/10">
             <div class="max-w-md mx-auto flex items-center gap-4">
@@ -23,6 +26,7 @@
                 <h2 class="font-medium">로그인</h2>
             </div>
         </header>
+>>>>>>> 0b85812 (feat: add and connect JavaScript files)
 
         <!-- Main Content -->
         <main class="px-6 py-8">
@@ -31,16 +35,16 @@
 
                     <!-- Email -->
                     <div class="space-y-2">
-                        <label class="block text-sm">이메일</label>
-                        <input type="email" id="email"
+                        <label for="email" class="block text-sm">이메일</label>
+                        <input type="email" id="email" name="email" required autocomplete="email"
                             class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
                             placeholder="이메일을 입력하세요" />
                     </div>
 
                     <!-- Password -->
                     <div class="space-y-2">
-                        <label class="block text-sm">비밀번호</label>
-                        <input type="password" id="password"
+                        <label for="password" class="block text-sm">비밀번호</label>
+                        <input type="password" id="password" name="password" required autocomplete="current-password"
                             class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
                             placeholder="비밀번호를 입력하세요" />
                     </div>
@@ -64,7 +68,7 @@
 
                     <!-- Links -->
                     <div class="flex justify-center gap-4 text-sm">
-                        <button type="button" onclick="alert('비밀번호 찾기 기능은 추후 구현 예정입니다.')"
+                        <button type="button" id="forgotPasswordBtn"
                             class="text-black/60 hover:text-black transition-colors">
                             비밀번호 찾기
                         </button>

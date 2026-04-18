@@ -1,4 +1,27 @@
 import { requireAuth, getQuiz, submitAnswer } from '/src/api.js';
+import { icon } from '/src/components/icon.js';
+
+// 헤더 주입 — exitBtn이 DOM에 생겨야 아래 이벤트 연결 가능
+const slot = document.getElementById('headerSlot');
+if (slot) {
+  slot.outerHTML = `
+    <header class="px-6 py-4 border-b border-black/10">
+      <div class="max-w-md mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <a href="/pages/category.html" aria-label="이전 페이지로"
+             class="p-2 -ml-2 hover:bg-black/5 rounded-lg transition-colors">
+            ${icon('arrow-left', 20)}
+          </a>
+          <h2 class="font-medium" id="categoryTitle"></h2>
+        </div>
+        <button id="exitBtn" type="button" aria-label="퀴즈 종료"
+                class="p-2 hover:bg-black/5 rounded-lg transition-colors">
+          ${icon('close', 20)}
+        </button>
+      </div>
+    </header>
+  `;
+}
 
 requireAuth();
 
@@ -15,6 +38,9 @@ let questions = [];
 let selectedAnswer = null;
 let showResult = false;
 
+// headerTitle은 이제 id로 찾아야 함 (헤더가 동적으로 생성됨)
+const headerTitle = document.getElementById('categoryTitle');
+const headerTitle = document.querySelector('h2');
 const headerTitle = document.querySelector('h2');
 const progressBar = document.querySelector('.h-full.bg-black');
 const questionNumberEl = document.querySelector('.text-sm.text-black\\/40');
