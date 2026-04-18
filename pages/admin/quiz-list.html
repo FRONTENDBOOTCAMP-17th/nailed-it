@@ -34,7 +34,7 @@
                 <!-- Title & Actions -->
                 <div class="flex items-center justify-between">
                     <h2 class="text-xl font-medium">문제 관리</h2>
-                    <a href="question-new.html"
+                    <a href="/pages/admin/quiz-form.html"
                         class="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-lg hover:bg-black/90 transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -45,17 +45,8 @@
                     </a>
                 </div>
 
-                <!-- Category Filter -->
-                <div class="flex gap-2 flex-wrap">
-                    <button class="px-4 py-2 rounded-lg transition-colors bg-black text-white"
-                        onclick="filterCategory(this, '전체')">전체</button>
-                    <button class="px-4 py-2 rounded-lg transition-colors border border-black/20 hover:bg-black/5"
-                        onclick="filterCategory(this, 'HTML')">HTML</button>
-                    <button class="px-4 py-2 rounded-lg transition-colors border border-black/20 hover:bg-black/5"
-                        onclick="filterCategory(this, 'CSS')">CSS</button>
-                    <button class="px-4 py-2 rounded-lg transition-colors border border-black/20 hover:bg-black/5"
-                        onclick="filterCategory(this, 'JavaScript')">JavaScript</button>
-                </div>
+                <!-- Category Filter (API로 동적 렌더링) -->
+                <div class="flex gap-2 flex-wrap" id="filterArea"></div>
 
                 <!-- Questions Table -->
                 <div class="border border-black/10 rounded-lg overflow-hidden">
@@ -70,7 +61,7 @@
                         <div class="col-span-2">생성일</div>
                     </div>
 
-                    <!-- Table Body -->
+                    <!-- Table Body (API로 동적 렌더링) -->
                     <div id="tableBody" class="divide-y divide-black/10">
                         <div class="px-6 py-12 text-center text-black/40">
                             문제를 불러오는 중...
@@ -79,14 +70,14 @@
 
                 </div>
 
-                <!-- Stats -->
+                <!-- Stats (API로 동적 렌더링) -->
                 <div id="stats" class="flex gap-4 text-sm text-black/60 flex-wrap"></div>
 
             </div>
         </main>
     </div>
-
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/pages/admin/quiz-list.js"></script>
 </body>
 
 </html>

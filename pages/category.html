@@ -14,7 +14,7 @@
         <header class="px-6 py-4 border-b border-black/10">
             <div class="max-w-md mx-auto flex items-center justify-between">
                 <div class="flex items-center gap-4">
-                    <a href="index.html" class="p-2 -ml-2 hover:bg-black/5 rounded-lg transition-colors">
+                    <a href="/index.html" class="p-2 -ml-2 hover:bg-black/5 rounded-lg transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="m12 19-7-7 7-7"></path>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="flex items-center gap-2">
                     <!-- Home -->
-                    <a href="index.html" class="p-2 hover:bg-black/5 rounded-lg transition-colors">
+                    <a href="/index.html" class="p-2 hover:bg-black/5 rounded-lg transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
@@ -33,7 +33,7 @@
                         </svg>
                     </a>
                     <!-- History -->
-                    <a href="history.html" class="p-2 hover:bg-black/5 rounded-lg transition-colors">
+                    <a href="/pages/history.html" class="p-2 hover:bg-black/5 rounded-lg transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
@@ -68,81 +68,8 @@
                 <!-- Error Message -->
                 <div id="errorMessage" class="text-sm text-red-500 text-center p-4 bg-red-50 rounded-lg hidden"></div>
 
-                <!-- Categories -->
-                <div class="space-y-4">
-
-                    <!-- HTML -->
-                    <button
-                        class="w-full p-6 border border-black/10 rounded-lg hover:bg-black/5 transition-colors text-left group">
-                        <div class="flex items-start gap-4">
-                            <div class="p-3 border border-black/10 rounded-lg group-hover:bg-white transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <polyline points="16 18 22 12 16 6"></polyline>
-                                    <polyline points="8 6 2 12 8 18"></polyline>
-                                    <line x1="12" y1="2" x2="12" y2="22"></line>
-                                </svg>
-                            </div>
-                            <div class="flex-1 space-y-1">
-                                <div class="flex items-center justify-between">
-                                    <h3 class="font-medium">HTML</h3>
-                                    <span class="text-sm text-black/40">10문제</span>
-                                </div>
-                                <p class="text-sm text-black/60">HTML 기초를 학습합니다.</p>
-                            </div>
-                        </div>
-                    </button>
-
-                    <!-- CSS -->
-                    <button
-                        class="w-full p-6 border border-black/10 rounded-lg hover:bg-black/5 transition-colors text-left group">
-                        <div class="flex items-start gap-4">
-                            <div class="p-3 border border-black/10 rounded-lg group-hover:bg-white transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"></path>
-                                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                                    <path d="m5 12-3 3 3 3"></path>
-                                    <path d="m9 18 3-3-3-3"></path>
-                                </svg>
-                            </div>
-                            <div class="flex-1 space-y-1">
-                                <div class="flex items-center justify-between">
-                                    <h3 class="font-medium">CSS</h3>
-                                    <span class="text-sm text-black/40">10문제</span>
-                                </div>
-                                <p class="text-sm text-black/60">CSS 기초를 학습합니다.</p>
-                            </div>
-                        </div>
-                    </button>
-
-                    <!-- JavaScript -->
-                    <button
-                        class="w-full p-6 border border-black/10 rounded-lg hover:bg-black/5 transition-colors text-left group">
-                        <div class="flex items-start gap-4">
-                            <div class="p-3 border border-black/10 rounded-lg group-hover:bg-white transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1">
-                                    </path>
-                                    <path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="flex-1 space-y-1">
-                                <div class="flex items-center justify-between">
-                                    <h3 class="font-medium">JavaScript</h3>
-                                    <span class="text-sm text-black/40">10문제</span>
-                                </div>
-                                <p class="text-sm text-black/60">JavaScript 기초를 학습합니다.</p>
-                            </div>
-                        </div>
-                    </button>
-
-                </div>
+                <!-- Category (API로 동적 렌더링) -->
+                <div class="space-y-4" id="categoryList"></div>
 
                 <!-- Info -->
                 <div class="pt-4 text-center text-sm text-black/40">
@@ -152,8 +79,8 @@
             </div>
         </main>
     </div>
-
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/pages/category.js"></script>
 </body>
 
 </html>

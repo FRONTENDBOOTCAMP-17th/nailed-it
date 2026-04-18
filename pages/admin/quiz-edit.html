@@ -14,7 +14,7 @@
         <header class="px-6 py-4 border-b border-black/10">
             <div class="max-w-4xl mx-auto flex items-center justify-between">
                 <div class="flex items-center gap-4">
-                    <a href="question-detail.html"
+                    <a href="/pages/admin/quiz-detail.html"
                         class="p-2 -ml-2 hover:bg-black/5 rounded-lg transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -42,28 +42,110 @@
             <div class="max-w-4xl mx-auto">
                 <form id="editQuestionForm" class="space-y-6">
 
-                    <!-- API로 받아와야 표시 가능: title -->
+                    <!-- Title (API로 받아와서 채워짐) -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium">
+                            퀴즈 제목 <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="title"
+                            class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
+                            placeholder="예: HTML의 정식 명칭" />
+                    </div>
 
-                    <!-- API로 받아와야 표시 가능: category -->
+                    <!-- Category (API로 받아와서 채워짐) -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium">
+                            카테고리 <span class="text-red-500">*</span>
+                        </label>
+                        <select id="category"
+                            class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20">
+                        </select>
+                    </div>
 
-                    <!-- API로 받아와야 표시 가능: difficulty -->
+                    <!-- Difficulty (API로 받아와서 채워짐) -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium">
+                            난이도 <span class="text-red-500">*</span>
+                        </label>
+                        <select id="difficulty"
+                            class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20">
+                            <option value="easy">쉬움</option>
+                            <option value="medium">보통</option>
+                            <option value="hard">어려움</option>
+                        </select>
+                    </div>
 
-                    <!-- API로 받아와야 표시 가능: question -->
+                    <!-- Question (API로 받아와서 채워짐) -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium">
+                            문제 내용 <span class="text-red-500">*</span>
+                        </label>
+                        <textarea id="question"
+                            class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 min-h-24"
+                            placeholder="문제를 입력하세요"></textarea>
+                    </div>
 
-                    <!-- API로 받아와야 표시 가능: options, answer -->
+                    <!-- Options (API로 받아와서 채워짐) -->
+                    <div class="space-y-4">
+                        <label class="block text-sm font-medium">
+                            보기 <span class="text-red-500">*</span>
+                        </label>
+                        <div class="space-y-3">
 
-                    <!-- API로 받아와야 표시 가능: explanation -->
+                            <div class="flex items-center gap-3">
+                                <input type="radio" id="correct-1" name="answer" value="0" class="w-4 h-4" />
+                                <label for="correct-1" class="text-sm text-black/60 w-12">정답</label>
+                                <input type="text" id="option1"
+                                    class="flex-1 px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
+                                    placeholder="보기 1" />
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <input type="radio" id="correct-2" name="answer" value="1" class="w-4 h-4" />
+                                <label for="correct-2" class="text-sm text-black/60 w-12">정답</label>
+                                <input type="text" id="option2"
+                                    class="flex-1 px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
+                                    placeholder="보기 2" />
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <input type="radio" id="correct-3" name="answer" value="2" class="w-4 h-4" />
+                                <label for="correct-3" class="text-sm text-black/60 w-12">정답</label>
+                                <input type="text" id="option3"
+                                    class="flex-1 px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
+                                    placeholder="보기 3" />
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <input type="radio" id="correct-4" name="answer" value="3" class="w-4 h-4" />
+                                <label for="correct-4" class="text-sm text-black/60 w-12">정답</label>
+                                <input type="text" id="option4"
+                                    class="flex-1 px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
+                                    placeholder="보기 4" />
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Explanation (API로 받아와서 채워짐) -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium">
+                            해설 <span class="text-red-500">*</span>
+                        </label>
+                        <textarea id="explanation"
+                            class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 min-h-24"
+                            placeholder="정답에 대한 해설을 입력하세요"></textarea>
+                    </div>
 
                     <!-- Error Message -->
                     <div id="errorMessage" class="text-sm text-red-500 text-center hidden"></div>
 
                     <!-- Action Buttons -->
                     <div class="flex gap-3 pt-4">
-                        <a href="question-detail.html"
+                        <a href="/pages/admin/quiz-detail.html"
                             class="flex-1 py-4 border border-black/20 rounded-lg hover:bg-black/5 transition-colors text-center">
                             취소
                         </a>
-                        <!-- API로 받아와야 작동 가능: 수정 완료 (문제 id 필요) -->
                         <button type="submit" id="submitBtn"
                             class="flex-1 bg-black text-white py-4 rounded-lg hover:bg-black/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
                             수정 완료
@@ -74,8 +156,8 @@
             </div>
         </main>
     </div>
-
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/pages/admin/quiz-edit.js"></script>
 </body>
 
 </html>

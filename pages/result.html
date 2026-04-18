@@ -13,9 +13,26 @@
         <!-- Header -->
         <header class="px-6 py-4 border-b border-black/10">
             <div class="max-w-md mx-auto flex items-center justify-between">
-                <div class="flex-1"></div>
-                <h2 class="font-medium text-center">퀴즈 결과</h2>
-                <div class="flex-1 flex justify-end">
+                <h2 class="font-medium">퀴즈 결과</h2>
+                <div class="flex items-center gap-2">
+                    <!-- Home -->
+                    <a href="/index.html" class="p-2 hover:bg-black/5 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </a>
+                    <!-- History -->
+                    <a href="/pages/history.html" class="p-2 hover:bg-black/5 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                            <path d="M3 3v5h5"></path>
+                            <path d="M12 7v5l4 2"></path>
+                        </svg>
+                    </a>
+                    <!-- Logout -->
                     <button id="logoutBtn" class="p-2 hover:bg-black/5 rounded-lg transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -28,33 +45,14 @@
             </div>
         </header>
 
-        <!-- Main Content -->
+        <!-- Main Content (API로 동적 렌더링) -->
         <main class="px-6 py-8">
             <div class="max-w-md mx-auto space-y-8">
-
-                <!-- API로 받아와야 표시 가능: score, totalQuizzes, category, completedAt -->
-
-                <!-- API로 받아와야 표시 가능: 맞은 문제 수, 틀린 문제 수 -->
-
-                <!-- API로 받아와야 표시 가능: 문제별 결과 (title, question, options, answer, selected_index, correct, skipped, explanation) -->
-
-                <!-- Actions -->
-                <div class="space-y-3">
-                    <a href="categories.html"
-                        class="block w-full bg-black text-white py-4 rounded-lg hover:bg-black/90 transition-colors text-center">다시
-                        풀기</a>
-                    <a href="history.html"
-                        class="block w-full border border-black/20 text-black py-4 rounded-lg hover:bg-black/5 transition-colors text-center">히스토리
-                        보기</a>
-                    <a href="index.html"
-                        class="block w-full border border-black/20 text-black py-4 rounded-lg hover:bg-black/5 transition-colors text-center">홈으로</a>
-                </div>
-
             </div>
         </main>
     </div>
-
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/pages/result.js"></script>
 </body>
 
 </html>
