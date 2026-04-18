@@ -44,30 +44,30 @@
 
                     <!-- Title (API로 받아와서 채워짐) -->
                     <div class="space-y-2">
-                        <label class="block text-sm font-medium">
+                        <label for="title" class="block text-sm font-medium">
                             퀴즈 제목 <span class="text-red-500">*</span>
                         </label>
-                        <input type="text" id="title"
+                        <input type="text" id="title" name="title" required
                             class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
                             placeholder="예: HTML의 정식 명칭" />
                     </div>
 
                     <!-- Category (API로 받아와서 채워짐) -->
                     <div class="space-y-2">
-                        <label class="block text-sm font-medium">
+                        <label for="category" class="block text-sm font-medium">
                             카테고리 <span class="text-red-500">*</span>
                         </label>
-                        <select id="category"
+                        <select id="category" name="category" required
                             class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20">
                         </select>
                     </div>
 
                     <!-- Difficulty (API로 받아와서 채워짐) -->
                     <div class="space-y-2">
-                        <label class="block text-sm font-medium">
+                        <label for="difficulty" class="block text-sm font-medium">
                             난이도 <span class="text-red-500">*</span>
                         </label>
-                        <select id="difficulty"
+                        <select id="difficulty" name="difficulty" required
                             class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20">
                             <option value="easy">쉬움</option>
                             <option value="medium">보통</option>
@@ -77,10 +77,10 @@
 
                     <!-- Question (API로 받아와서 채워짐) -->
                     <div class="space-y-2">
-                        <label class="block text-sm font-medium">
+                        <label for="question" class="block text-sm font-medium">
                             문제 내용 <span class="text-red-500">*</span>
                         </label>
-                        <textarea id="question"
+                        <textarea id="question" name="question" required
                             class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 min-h-24"
                             placeholder="문제를 입력하세요"></textarea>
                     </div>
@@ -95,7 +95,7 @@
                             <div class="flex items-center gap-3">
                                 <input type="radio" id="correct-1" name="answer" value="0" class="w-4 h-4" />
                                 <label for="correct-1" class="text-sm text-black/60 w-12">정답</label>
-                                <input type="text" id="option1"
+                                <input type="text" id="option1" name="option1" required
                                     class="flex-1 px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
                                     placeholder="보기 1" />
                             </div>
@@ -103,7 +103,7 @@
                             <div class="flex items-center gap-3">
                                 <input type="radio" id="correct-2" name="answer" value="1" class="w-4 h-4" />
                                 <label for="correct-2" class="text-sm text-black/60 w-12">정답</label>
-                                <input type="text" id="option2"
+                                <input type="text" id="option2" name="option2" required
                                     class="flex-1 px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
                                     placeholder="보기 2" />
                             </div>
@@ -111,7 +111,7 @@
                             <div class="flex items-center gap-3">
                                 <input type="radio" id="correct-3" name="answer" value="2" class="w-4 h-4" />
                                 <label for="correct-3" class="text-sm text-black/60 w-12">정답</label>
-                                <input type="text" id="option3"
+                                <input type="text" id="option3" name="option3" required
                                     class="flex-1 px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
                                     placeholder="보기 3" />
                             </div>
@@ -119,7 +119,7 @@
                             <div class="flex items-center gap-3">
                                 <input type="radio" id="correct-4" name="answer" value="3" class="w-4 h-4" />
                                 <label for="correct-4" class="text-sm text-black/60 w-12">정답</label>
-                                <input type="text" id="option4"
+                                <input type="text" id="option4" name="option4" required
                                     class="flex-1 px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
                                     placeholder="보기 4" />
                             </div>
@@ -129,10 +129,10 @@
 
                     <!-- Explanation (API로 받아와서 채워짐) -->
                     <div class="space-y-2">
-                        <label class="block text-sm font-medium">
+                        <label for="explanation" class="block text-sm font-medium">
                             해설 <span class="text-red-500">*</span>
                         </label>
-                        <textarea id="explanation"
+                        <textarea id="explanation" name="explanation" required
                             class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 min-h-24"
                             placeholder="정답에 대한 해설을 입력하세요"></textarea>
                     </div>
