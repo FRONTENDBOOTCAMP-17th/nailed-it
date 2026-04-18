@@ -27,48 +27,13 @@
           <p class="text-xl font-bold">프론트엔드 학습자를 위한 퀴즈 웹서비스</p>
         </div>
 
-        <!-- Categories Preview -->
+        <!-- Category Preview -->
         <div class="space-y-4 pt-2">
           <p class="text-sm text-black/60 text-center leading-relaxed">
             HTML, CSS, JavaScript 문제를 풀고<br />
             정답과 해설을 확인하며 학습할 수 있습니다!
           </p>
-          <div class="grid grid-cols-3 gap-3">
-
-            <!-- HTML -->
-            <div class="border border-black/10 rounded-lg flex flex-col items-center justify-center gap-2 py-6 px-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-                <line x1="12" y1="2" x2="12" y2="22"></line>
-              </svg>
-              <span class="text-sm font-medium">HTML</span>
-            </div>
-
-            <!-- CSS -->
-            <div class="border border-black/10 rounded-lg flex flex-col items-center justify-center gap-2 py-6 px-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"></path>
-                <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                <path d="m5 12-3 3 3 3"></path>
-                <path d="m9 18 3-3-3-3"></path>
-              </svg>
-              <span class="text-sm font-medium">CSS</span>
-            </div>
-
-            <!-- JavaScript -->
-            <div class="border border-black/10 rounded-lg flex flex-col items-center justify-center gap-2 py-6 px-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"></path>
-                <path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"></path>
-              </svg>
-              <span class="text-sm font-medium">JavaScript</span>
-            </div>
-
-          </div>
+          <div class="grid grid-cols-3 gap-3" id="categoryPreview"></div>
         </div>
 
         <!-- Action Buttons -->
