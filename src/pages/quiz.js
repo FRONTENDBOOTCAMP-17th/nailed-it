@@ -1,5 +1,4 @@
 import { requireAuth, getQuiz, submitAnswer } from '/src/api.js';
-<<<<<<< HEAD
 import { icon } from '/src/components/icon.js';
 
 // 헤더 주입 — exitBtn이 DOM에 생겨야 아래 이벤트 연결 가능
@@ -23,8 +22,6 @@ if (slot) {
     </header>
   `;
 }
-=======
->>>>>>> 0b85812 (feat: add and connect JavaScript files)
 
 requireAuth();
 
@@ -41,12 +38,10 @@ let questions = [];
 let selectedAnswer = null;
 let showResult = false;
 
-<<<<<<< HEAD
 // headerTitle은 이제 id로 찾아야 함 (헤더가 동적으로 생성됨)
 const headerTitle = document.getElementById('categoryTitle');
-=======
 const headerTitle = document.querySelector('h2');
->>>>>>> 0b85812 (feat: add and connect JavaScript files)
+const headerTitle = document.querySelector('h2');
 const progressBar = document.querySelector('.h-full.bg-black');
 const questionNumberEl = document.querySelector('.text-sm.text-black\\/40');
 const difficultyEl = document.querySelector('.text-xs.rounded');
