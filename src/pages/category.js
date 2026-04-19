@@ -1,5 +1,4 @@
 import { requireAuth, getUser, getCategories, createSession, clearAuth } from '/src/api.js';
-<<<<<<< HEAD
 import { pageHeader, defaultActions } from '/src/components/header.js';
 import { icon } from '/src/components/icon.js';
 
@@ -30,8 +29,6 @@ export function initCategoryPage() {
       location.href = '/index.html';
     }
   });
-
-
 
   // 카테고리 목록 렌더링
   async function renderCategories() {
