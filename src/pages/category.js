@@ -52,13 +52,7 @@ async function renderCategories() {
       >
         <div class="flex items-start gap-4">
           <div class="p-3 border border-black/10 rounded-lg group-hover:bg-white transition-colors">
-
-            ${icon(category.name) || icon('html')}
-
             ${icons[category.name] || icons.html}
-
-            ${icons[category.name] || icons.html}
-
           </div>
           <div class="flex-1 space-y-1">
             <div class="flex items-center justify-between">
