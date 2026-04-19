@@ -1,5 +1,4 @@
 import { requireAuth, getUser, getCategories, getSessionHistory, clearAuth } from '/src/api.js';
-<<<<<<< HEAD
 import { pageHeader, historyActions } from '/src/components/header.js';
 
 export function initHistoryPage() {
