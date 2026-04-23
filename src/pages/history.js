@@ -120,7 +120,7 @@ export function initHistoryPage() {
                 <div class="text-sm text-black/60">점수: ${Math.round((session.score / session.totalQuizzes) * 100)}점</div>
               </div>
             </div>
-            <div class="text-sm text-black/40">세션 #${index + 1}</div>
+            <div class="text-sm text-black/40">세션 #${data.total - index}</div>
           </div>
         </a>
       `).join('');
