@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,21 +49,21 @@
                 <div class="flex gap-2 flex-wrap" id="filterArea"></div>
 
                 <!-- Questions Table -->
-                <div class="border border-black/10 rounded-lg overflow-hidden">
+                <div class="border border-black/10 rounded-lg overflow-x-auto">
 
                     <!-- Table Header -->
                     <div
-                        class="grid grid-cols-12 gap-4 px-6 py-3 bg-black/5 border-b border-black/10 text-sm font-medium">
+                        class="min-w-[480px] grid grid-cols-12 gap-2 px-4 py-3 bg-black/5 border-b border-black/10 text-sm font-medium">
                         <div class="col-span-1">번호</div>
                         <div class="col-span-2">카테고리</div>
-                        <div class="col-span-5">제목</div>
+                        <div class="col-span-4">제목</div>
                         <div class="col-span-2">난이도</div>
-                        <div class="col-span-2">생성일</div>
+                        <div class="col-span-3">생성일</div>
                     </div>
 
                     <!-- Table Body (API로 동적 렌더링) -->
-                    <div id="tableBody" class="divide-y divide-black/10">
-                        <div class="px-6 py-12 text-center text-black/40">
+                    <div id="tableBody" class="divide-y divide-black/10 min-w-[480px]">
+                        <div class="px-4 py-12 text-center text-black/40">
                             문제를 불러오는 중...
                         </div>
                     </div>
@@ -75,4 +76,5 @@
     </div>
     <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
