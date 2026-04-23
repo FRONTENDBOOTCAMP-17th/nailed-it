@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카테고리선택 PAGE</title>
+</head>
+
+<body>
+    <div class="min-h-screen bg-white">
+    <div id="headerSlot"></div>
+
+        <!-- Main Content -->
+        <main class="px-6 py-8">
+            <div class="max-w-md mx-auto space-y-6">
+
+                <!-- User Info -->
+                <div class="text-center">
+                    <p class="text-black/60">
+                        학습할 카테고리를 선택해주세요
+                    </p>
+                </div>
+
+                <!-- Error Message -->
+                <div id="errorMessage" class="text-sm text-red-500 text-center p-4 bg-red-50 rounded-lg hidden"></div>
+
+                <!-- Category (API로 동적 렌더링) -->
+                <div class="space-y-4" id="categoryList"></div>
+
+                <!-- Info -->
+                <div class="pt-4 text-center text-sm text-black/40">
+                    각 카테고리당 10문제가 출제됩니다
+                </div>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

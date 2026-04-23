@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NAILED IT</title>
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold">NAILED IT</h1>
-    <script type="module" src="/js/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAILED-IT</title>
+</head>
+
+<body>
+  <div class="min-h-screen bg-white flex flex-col">
+
+    <!-- Header -->
+    <header class="px-6 py-4 border-b border-black/10">
+      <div class="max-w-md mx-auto flex justify-between items-center">
+        <a class="font-bold">NAILED-IT</a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col items-center justify-center px-6 py-12">
+      <div class="max-w-md w-full space-y-6">
+
+        <!-- Title -->
+        <div class="text-center space-y-4">
+          <h1 class="text-4xl font-bold tracking-tight">NAILED-IT</h1>
+          <p class="text-xl font-bold">프론트엔드 학습자를 위한 퀴즈 웹서비스</p>
+        </div>
+
+        <!-- Category Preview -->
+        <div class="space-y-4 pt-2">
+          <p class="text-sm text-black/60 text-center leading-relaxed">
+            HTML, CSS, JavaScript 문제를 풀고<br />
+            정답과 해설을 확인하며 학습할 수 있습니다!
+          </p>
+          <div class="grid grid-cols-3 gap-3" id="categoryPreview"></div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="space-y-3 pt-4">
+          <a href="/pages/login.html"
+            class="block w-full bg-black text-white py-4 rounded-lg hover:bg-black/90 transition-colors text-center">
+            퀴즈 시작하기
+          </a>
+          <a href="/pages/signup.html"
+            class="block w-full border border-black/20 text-black py-4 rounded-lg hover:bg-black/5 transition-colors text-center">
+            회원가입 하러 가기
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>

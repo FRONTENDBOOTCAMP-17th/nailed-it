@@ -8,17 +8,81 @@
 - **주요 타겟**: 프론트엔드 기초를 다지고 싶은 학습자 🐣
 - **핵심 가치**: 문제 풀이를 통한 직관적인 학습 경험 제공 💡
 
-## ✨ Goals
+## ⭐ Goals
 
-- 프론트엔드 핵심 개념의 퀴즈화 🔥
+- 프론트엔드 핵심 개념의 퀴즈화 🔎
 - 사용자 친화적인 UI/UX 구현 🎨
 - 지속적인 문제 업데이트 및 기능 확장 📈
 
+## ✨ Features
+
+- 🧑‍💻 관리자(Admin)
+  - 퀴즈 등록 / 수정 / 삭제
+  - 카테고리 관리
+
+- 🙋‍♀️ 사용자(User)
+  - 카테고리별 퀴즈 풀이
+  - 정답 및 해설 확인
+
+- 🔐 로그인 상태에 따른 기능 제한
+
 ## 🛠 Tech Stack
 
-- **Language**: HTML, CSS, JavaScript ⭐
-- **Build Tool**: Vite ⚡️
+- **Frontend**: Vanilla JavaScript (Vite) ⚡️
 - **Styling**: Tailwind CSS 🌊
+- **API**: REST API 🔥
+- **Architecture**: Role-based (Admin · User) 👥
+
+## 📁 Project Structure
+
+```plaintext
+NAILED-IT/
+├── index.html                  # 서비스 소개 및 시작 화면
+├── pages/                      # HTML 페이지
+│   ├── login.html              # 로그인
+│   ├── signup.html             # 회원가입
+│   ├── category.html           # 카테고리 선택
+│   ├── quiz.html               # 퀴즈 풀이
+│   ├── result.html             # 퀴즈 결과
+│   ├── history.html            # 히스토리
+│   └── admin/                  # 관리자 페이지
+│       ├── quiz-list.html
+│       ├── quiz-form.html
+│       ├── quiz-edit.html
+│       └── quiz-detail.html
+│
+├── src/
+│   ├── components/             # 공통 UI 컴포넌트
+│   │   ├── header.js           # 페이지 헤더 컴포넌트
+│   │   └── icon.js             # SVG 아이콘 컴포넌트
+│   │
+│   ├── pages/                  # 페이지별 JS 로직
+│   │   ├── index.js
+│   │   ├── login.js
+│   │   ├── signup.js
+│   │   ├── category.js
+│   │   ├── quiz.js
+│   │   ├── result.js
+│   │   ├── history.js
+│   │   └── admin/
+│   │       ├── quiz-list.js
+│   │       ├── quiz-form.js
+│   │       ├── quiz-edit.js
+│   │       └── quiz-detail.js
+│   │
+│   ├── api.js                  # API 호출 함수 모음
+│   ├── main.js                 # Tailwind CSS 진입점
+│   └── style.css               # Tailwind CSS
+│
+├── docs/                       # 개발 문서
+│   ├── API_GUIDE.md            # API 사용 가이드
+│   └── NAILED_IT_API.md        # API 명세
+│
+├── package.json
+└── vite.config.js
+```
+
+> 📍 개발 진행에 따라 구조가 추가되거나 변경될 수 있습니다!!
 
 ## 💻 Getting Started
 
@@ -39,7 +103,9 @@ npm run dev
 ```
 
 ## 🔗 Deployment
+
 Live Demo: Coming Soon 🚀
 
 ---
+
 Designed and Developed with 🖤 by [**Kim Yeon-soo**](https://github.com/harikim02)

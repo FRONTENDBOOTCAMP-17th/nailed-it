@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 PAGE</title>
+</head>
+
+<body>
+    <div class="min-h-screen bg-white">
+        <div id="headerSlot"></div>
+
+        <!-- Main Content -->
+        <main class="px-6 py-8">
+            <div class="max-w-md mx-auto">
+                <form id="loginForm" class="space-y-6">
+
+                    <!-- Email -->
+                    <div class="space-y-2">
+                        <label for="email" class="block text-sm">이메일</label>
+                        <input type="email" id="email" name="email" required autocomplete="email"
+                            class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
+                            placeholder="이메일을 입력하세요" />
+                    </div>
+
+                    <!-- Password -->
+                    <div class="space-y-2">
+                        <label for="password" class="block text-sm">비밀번호</label>
+                        <input type="password" id="password" name="password" required autocomplete="current-password"
+                            class="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20"
+                            placeholder="비밀번호를 입력하세요" />
+                    </div>
+
+                    <!-- Remember Me -->
+                    <div class="flex items-center gap-3">
+                        <input type="checkbox" id="rememberMe" class="w-4 h-4 border-black/20 rounded" />
+                        <label for="rememberMe" class="text-sm text-black/60">
+                            로그인 상태 유지
+                        </label>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div id="errorMessage" class="text-sm text-red-500 text-center hidden"></div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="submitBtn"
+                        class="w-full bg-black text-white py-4 rounded-lg hover:bg-black/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        로그인
+                    </button>
+
+                    <!-- Links -->
+                    <div class="flex justify-center gap-4 text-sm">
+                        <button type="button" id="forgotPasswordBtn"
+                            class="text-black/60 hover:text-black transition-colors">
+                            비밀번호 찾기
+                        </button>
+                        <span class="text-black/20">|</span>
+                        <a href="/pages/signup.html" class="text-black/60 hover:text-black transition-colors">
+                            회원가입
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
