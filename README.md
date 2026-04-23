@@ -75,6 +75,9 @@ NAILED-IT/
 │   └── style.css               # Tailwind CSS
 │
 ├── docs/                       # 개발 문서
+│   ├── API_GUIDE.md            # API 사용 가이드
+│   └── NAILED_IT_API.md        # API 명세
+│
 ├── package.json
 └── vite.config.js
 ```
