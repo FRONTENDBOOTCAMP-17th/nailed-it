@@ -46,7 +46,7 @@ export function initQuizListPage() {
   }
 
   async function fetchQuizzes() {
-    tableBody.innerHTML = '<div class="px-6 py-12 text-center text-black/40">문제를 불러오는 중...</div>';
+    tableBody.innerHTML = '<div class="px-5 py-12 text-center text-black/40">문제를 불러오는 중...</div>';
 
     try {
       const params = { page: 1, limit: 100 };
@@ -60,7 +60,7 @@ export function initQuizListPage() {
       const quizzes = data.quizzes;
 
       if (quizzes.length === 0) {
-        tableBody.innerHTML = '<div class="px-6 py-12 text-center text-black/40">등록된 문제가 없습니다.</div>';
+        tableBody.innerHTML = '<div class="px-5 py-12 text-center text-black/40">등록된 문제가 없습니다.</div>';
         statsEl.textContent = '';
         return;
       }
@@ -70,18 +70,18 @@ export function initQuizListPage() {
         const date = quiz.createdAt?.split('T')[0];
         return `
           <a
-            class="w-full grid grid-cols-12 gap-4 px-6 py-4 text-left hover:bg-black/5 transition-colors block cursor-pointer"
+            class="w-full grid grid-cols-12 gap-2 px-5 py-4 text-left hover:bg-black/5 transition-colors flex items-center cursor-pointer"
             data-quiz-id="${quiz.id}"
           >
-            <div class="col-span-1 text-black/60">${index + 1}</div>
+            <div class="col-span-1 text-black/60 text-sm">${index + 1}</div>
             <div class="col-span-2">
-              <span class="px-2 py-1 text-xs border border-black/10 rounded">${quiz.category.toUpperCase()}</span>
+              <span class="px-1 py-1 text-xs border border-black/10 rounded">${quiz.category.toUpperCase()}</span>
             </div>
-            <div class="col-span-5 truncate">${quiz.title}</div>
+            <div class="col-span-4 truncate text-sm">${quiz.title}</div>
             <div class="col-span-2">
-              <span class="px-2 py-1 text-xs rounded ${d.class}">${d.label}</span>
+              <span class="px-1 py-0.5 text-xs rounded whitespace-nowrap ${d.class}">${d.label}</span>
             </div>
-            <div class="col-span-2 text-black/60 text-sm">${date}</div>
+            <div class="col-span-3 text-black/60 text-xs whitespace-nowrap">${date}</div>
           </a>
         `;
       }).join('');
@@ -103,7 +103,7 @@ export function initQuizListPage() {
       statsEl.innerHTML = `<span>전체 문제: ${total}개</span> ${categoryStats}`;
 
     } catch (err) {
-      tableBody.innerHTML = '<div class="px-6 py-12 text-center text-red-500">문제를 불러오는 데 실패했습니다.</div>';
+      tableBody.innerHTML = '<div class="px-5 py-12 text-center text-red-500">문제를 불러오는 데 실패했습니다.</div>';
     }
   }
 

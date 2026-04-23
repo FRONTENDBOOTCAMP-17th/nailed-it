@@ -2,9 +2,22 @@
 
 ![header](https://capsule-render.vercel.app/api?type=waving&color=FFD700&height=200&section=header&text=NAILED-IT&fontSize=72&fontColor=000000&fontAlignY=38&desc=프론트엔드%20학습자를%20위한%20퀴즈%20웹서비스&descAlignY=58&descFontColor=333333&descSize=20)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Black+Han+Sans&size=22&pause=1000&color=FFD700&background=00000000&center=true&vCenter=true&width=600&lines=Nail+your+frontend+skills+with+quizzes.+👍;HTML+%7C+CSS+%7C+JavaScript+퀴즈로+실력을+쌓아보세요!;카테고리별+10문제+풀이+%2B+즉시+피드백+제공)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Black+Han+Sans&size=22&pause=1000&color=FFD700&background=000000&center=true&vCenter=true&width=600&lines=Nail+your+frontend+skills+with+quizzes~👍;HTML+%7C+CSS+%7C+JavaScript+퀴즈로+실력을+쌓아보세요!📝;카테고리별+10문제+풀이+%2B+즉시+피드백+제공+💯)](https://git.io/typing-svg)
 
 <br/>
+
+<div align="center">
+
+### 🚀 지금 바로 사용해보기
+⬇️
+
+[![Try it Now](https://img.shields.io/badge/🔥%20Try%20It%20Now-NAILED--IT-FFD700?style=for-the-badge)](https://nailed-it-kappa.vercel.app/)
+
+</div>
+
+<br/>
+
+---
 
 <img src="https://img.shields.io/badge/Vanilla JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
 <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
@@ -13,7 +26,7 @@
 
 </div>
 
-<br/>
+<br/><br/>
 
 ## 📌 프로젝트 개요
 
@@ -113,6 +126,8 @@ HTML, CSS, JavaScript 핵심 개념을 객관식 퀴즈로 풀어보고, 즉시 
 
 ```plaintext
 NAILED-IT/
+├── public/
+│   └── favicon.png             # 서비스 파비콘 - 로고 추가
 ├── index.html                  # 서비스 소개 및 시작 화면
 ├── pages/                      # HTML 페이지
 │   ├── login.html              # 로그인
@@ -184,9 +199,9 @@ npm run dev
 
 <br/>
 
-## 🔗 배포
+## 🔗 배포 URL
 
-> Live Demo: Coming Soon 🚀
+> [NAILED-IT](https://nailed-it-kappa.vercel.app/)
 
 <br/>
 
