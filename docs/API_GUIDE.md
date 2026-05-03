@@ -6,17 +6,17 @@
 
 ## 기본 정보
 
-| 항목 | 값 |
-|------|-----|
-| **Base URL** | `https://api.fullstackfamily.com/api/nailed-it/v1` |
-| **인증 방식** | JWT Bearer Token |
-| **Content-Type** | `application/json` |
+| 항목             | 값                                                 |
+| ---------------- | -------------------------------------------------- |
+| **Base URL**     | `https://api.fullstackfamily.com/api/nailed-it/v1` |
+| **인증 방식**    | JWT Bearer Token                                   |
+| **Content-Type** | `application/json`                                 |
 
 ### 테스트 계정
 
-| 구분 | 이메일 | 비밀번호 |
-|------|--------|----------|
-| 관리자 | `admin@nailed.it` | `boss-520!` |
+| 구분        | 이메일            | 비밀번호    |
+| ----------- | ----------------- | ----------- |
+| 관리자      | `admin@nailed.it` | `boss-520!` |
 | 일반 사용자 | `user1@nailed.it` | `User1234!` |
 
 ### API 문서 (직접 테스트 가능)
@@ -145,9 +145,9 @@ import { apiPublic } from "./api.js";
 // 회원가입 폼 제출 시
 async function signup(nickname, email, password) {
   const result = await apiPublic("POST", "/auth/signup", {
-    nickname: nickname,   // 1~10자, 특수문자는 - _ . 만 가능
-    email: email,         // 이메일 형식
-    password: password,   // 8자 이상, 영문 + 숫자 + 특수문자 각 1개 이상
+    nickname: nickname, // 1~10자, 특수문자는 - _ . 만 가능
+    email: email, // 이메일 형식
+    password: password, // 8자 이상, 영문 + 숫자 + 특수문자 각 1개 이상
   });
 
   if (result.success) {
@@ -276,8 +276,8 @@ async function startQuiz(categoryName) {
 
   if (result.success) {
     const sessionId = result.data.sessionId;
-    const quizIds = result.data.quizIds;     // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    const total = result.data.totalQuizzes;  // 10
+    const quizIds = result.data.quizIds; // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const total = result.data.totalQuizzes; // 10
 
     console.log("세션 ID:", sessionId);
     console.log("문제 수:", total);
@@ -438,7 +438,7 @@ async function getHistory(page = 1) {
 
     result.data.sessions.forEach(function (session) {
       console.log(
-        session.category + " - " + session.score + "/" + session.totalQuizzes
+        session.category + " - " + session.score + "/" + session.totalQuizzes,
       );
     });
   }
@@ -448,7 +448,7 @@ async function getHistory(page = 1) {
 async function getHistoryByCategory(categoryName) {
   const result = await api(
     "GET",
-    "/sessions?category=" + categoryName + "&page=1&limit=10"
+    "/sessions?category=" + categoryName + "&page=1&limit=10",
   );
 
   return result.data;
@@ -574,10 +574,14 @@ for (let i = 0; i < quizIds.length; i++) {
   });
 
   // 답안 제출 (여기서는 예시로 0번 선택)
-  const answerResult = await api("POST", "/sessions/" + sessionId + "/answers", {
-    quizId: quizIds[i],
-    selectedIndex: 0,
-  });
+  const answerResult = await api(
+    "POST",
+    "/sessions/" + sessionId + "/answers",
+    {
+      quizId: quizIds[i],
+      selectedIndex: 0,
+    },
+  );
 
   if (answerResult.data.correct) {
     console.log("  → 정답!");
@@ -589,24 +593,27 @@ for (let i = 0; i < quizIds.length; i++) {
 
 // 4단계: 최종 결과 확인
 const finalResult = await api("GET", "/sessions/" + sessionId);
-console.log("최종 점수:", finalResult.data.score + "/" + finalResult.data.totalQuizzes);
+console.log(
+  "최종 점수:",
+  finalResult.data.score + "/" + finalResult.data.totalQuizzes,
+);
 ```
 
 ---
 
 ## 에러 코드 정리
 
-| HTTP 코드 | 의미 | 언제 발생하나? |
-|-----------|------|--------------|
-| `400` | 잘못된 요청 | 필수 값을 안 보냈을 때, 세션에 없는 quizId로 답안 제출 |
-| `401` | 인증 실패 | 토큰이 없거나 만료됨, 로그인 정보 틀림 |
-| `403` | 권한 없음 | 일반 사용자가 관리자 API 호출, 다른 사람의 세션 접근 |
-| `404` | 없음 | 존재하지 않는 퀴즈 ID, 퀴즈 0개인 카테고리로 세션 생성 |
-| `409` | 중복 | 이미 있는 이메일/닉네임으로 가입, 같은 문제에 답 두 번 제출 |
+| HTTP 코드 | 의미        | 언제 발생하나?                                              |
+| --------- | ----------- | ----------------------------------------------------------- |
+| `400`     | 잘못된 요청 | 필수 값을 안 보냈을 때, 세션에 없는 quizId로 답안 제출      |
+| `401`     | 인증 실패   | 토큰이 없거나 만료됨, 로그인 정보 틀림                      |
+| `403`     | 권한 없음   | 일반 사용자가 관리자 API 호출, 다른 사람의 세션 접근        |
+| `404`     | 없음        | 존재하지 않는 퀴즈 ID, 퀴즈 0개인 카테고리로 세션 생성      |
+| `409`     | 중복        | 이미 있는 이메일/닉네임으로 가입, 같은 문제에 답 두 번 제출 |
 
 ---
 
 ## 참고
 
 - **API 문서 페이지**: https://www.fullstackfamily.com/nailed-it/api-docs
-- **API 요구사항 명세서**: `NAILED_IT_API_REQUIREMENTS.md`
+- **API 요구사항 명세서**: `NAILED_IT_API.md`
