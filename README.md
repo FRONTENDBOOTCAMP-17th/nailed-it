@@ -173,7 +173,7 @@ NAILED-IT/
 │   │   ├── header.js           # 페이지 헤더 컴포넌트
 │   │   └── icon.js             # SVG 아이콘 컴포넌트
 │   │
-│   ├── pages/                  # 페이지별 JS 로직
+│   ├── pages/                  # 유저 페이지 JS 로직
 │   │   ├── index.js
 │   │   ├── login.js
 │   │   ├── signup.js
@@ -263,11 +263,10 @@ Conventional Commits 규칙을 적용하여 커밋 메시지의 일관성을 유
 
 ## 👩‍💻 Junior Developer (주니어 개발자)
 
-|                       <img src="images/kys.png" width="80"/>                       |
-| :--------------------------------------------------------------------------------: |
-|                                     **김연수**                                     |
-|                               FRONTENDBOOTCAMP-17th                                |
-| Designed and Developed with 🖤 by [**Kim Yeon-soo**](https://github.com/harikim02) |
+|                   <img src="images/kys.png" width="80"/>                   |
+| :------------------------------------------------------------------------: |
+| Designed and Developed with 🖤 by [**김연수**](https://github.com/harilog) |
+|                           FRONTENDBOOTCAMP-17th                            |
 
 <br/>
 
